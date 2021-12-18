@@ -55,6 +55,11 @@
     border-bottom: 5px solid #39FF14;
     border-radius: 5px;
 }
+.header .header-nav-btn{
+    display: none;
+
+}
+
 /* end header section  */
 
 /* hero section  */
@@ -284,6 +289,7 @@
     /* .header .header-nav {
         display: none;
     } */
+
     .hero {
         width: 100%;
         flex-direction: column;
@@ -343,6 +349,40 @@
 @media (max-width:700px) {
     .header .header-nav{
         display: none;
+    }
+    .header .header-nav-btn img{
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+    }
+    .header .header-nav-btn {
+        display: block;
+    }
+    .header .header-nav-btn .nav{
+        position: absolute;
+        width: 100%;
+        height: 100vh !important;
+        top: 0;left: 0;
+        z-index: 1;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+    }
+    .header .header-nav-btn .nav ul li {
+        text-decoration: none;
+        list-style: none;
+    }
+    .header .header-nav-btn .nav a{
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #39FF14;
+        text-align: center;
+        line-height: 50px;
     }
     .service .service-body {
         margin-top: 50px;
