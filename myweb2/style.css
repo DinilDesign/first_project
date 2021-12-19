@@ -40,7 +40,7 @@
     justify-content: space-between;
     align-items: center;
     height: 65px;
-    flex-direction: row !important;
+    flex-direction: c;
     text-decoration: none;
     list-style: none;
     color: #39FF14;
@@ -59,6 +59,9 @@
     display: none;
 
 }
+.header span.icon {
+    display: none;
+}    
 
 /* end header section  */
 
@@ -152,12 +155,21 @@
     font-weight: bold;
     color: white;
 }
-/* end about section  */
+.up-btn a {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 3rem;
+    color: #39FF14;
+    text-decoration: none;
 
+}
+/* end about section  */
 /* service section  */
 .service {
     width: 100%;
     height: 100vh;
+    padding-top: 65px;
     background-color: #ABABAB;
     display: flex;
     flex-direction: column;
@@ -203,6 +215,7 @@
 .contact {
     width: 100%;
     height: 100vh;
+    padding-top: 65px;
     background-color: #ABABAB;
 }
 .contact .contact-header h1{
@@ -285,6 +298,7 @@
     border-radius: 5px;
 }
 /* end footer section  */
+
 @media (max-width:1000px) {
     /* .header .header-nav {
         display: none;
@@ -347,8 +361,25 @@
 }
 
 @media (max-width:700px) {
-    .header .header-nav{
-        display: none;
+    .header .header-nav {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: -100vh;
+        z-index: 2;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #717171;
+        color: #39FF14;
+        font-size: 3rem;
+        transition: .7s ease;
+    }
+    .header .header-nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
     .header .header-nav-btn img{
         height: 64px;
@@ -357,32 +388,14 @@
         top: 5px;
         right: 20px;
     }
-    .header .header-nav-btn {
+    .header span.icon{
+        font-size: 3rem !important;
+        color: #39FF14 !important;
         display: block;
-    }
-    .header .header-nav-btn .nav{
         position: absolute;
-        width: 100%;
-        height: 100vh !important;
-        top: 0;left: 0;
-        z-index: 1;
-        background-color: transparent;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        display: none;
-    }
-    .header .header-nav-btn .nav ul li {
-        text-decoration: none;
-        list-style: none;
-    }
-    .header .header-nav-btn .nav a{
-        text-decoration: none;
-        font-size: 2rem;
-        font-weight: 900;
-        color: #39FF14;
-        text-align: center;
-        line-height: 50px;
+        top: 5px;
+        right: 20px;
+        cursor: pointer;
     }
     .service .service-body {
         margin-top: 50px;

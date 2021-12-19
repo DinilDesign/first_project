@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portflio</title>
+    <script src="https://kit.fontawesome.com/5e4019560a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,25 +15,21 @@
         <div class="header-logo">
             <h1 class="header-logo-text">Portfo<span>lio</span></h1>
          </div>
-         <div class="header-nav">
-            <ul>
+         <div class="header-nav" id="menu">
+            <ul id="nav">
                 <a href="#"><li>Home</li></a>
                 <a href="#about"><li>About</li></a>
                 <a href="#service"><li>Service</li></a>
                 <a href="#contact"><li>Contact</li></a>
             </ul>
+            <span style="font-size: 3em; color: Tomato;" class="icon">
+                <i class="far fa-window-close" onclick="closeMenu()"></i>
+            </span>
          </div>
-         <div class="header-nav-btn">
-             <img src="../myweb2/img/nav-btn.png" alt="" >
-             <div class="nav">
-                <ul>
-                    <a href="#"><li>Home</li></a>
-                    <a href="#about"><li>About</li></a>
-                    <a href="#service"><li>Service</li></a>
-                    <a href="#contact"><li>Contact</li></a>
-                </ul>
-             </div>
-         </div>
+         <span style="font-size: 3em; color: Tomato;" class="icon">
+            <i class="fas fa-bars" onclick="openMenu()"></i>
+         </span>
+
        </div>
     <!-- end header section -->
     <!-- hero section  -->
@@ -56,7 +53,12 @@
             <h1>About Us</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum exercitationem assumenda ab sapiente distinctio illum explicabo itaque voluptates? Accusantium recusandae praesentium obcaecati qui, sequi modi, vero laudantium quaerat cumque culpa, provident impedit nemo quam doloribus dolorem dolor repellat. Placeat officiis ipsam eum quisquam repudiandae nisi illum et! Ipsum, modi porro?</p>
         </div>
+        <span class="up-btn">
+            <a href="#"><i class="fas fa-chevron-circle-up"></i></a>
+        </span>
+
     </div>
+
     <!-- end about  section  -->
     <!-- service section  -->
     <div class="service section" id="service">
@@ -98,7 +100,7 @@
     <!-- end contact section  -->
 
     <!-- footer section  -->
-    <div class="footer section">
+    <!-- <div class="footer section">
         <div class="footer-logo">
             <h1 class="footer-logo-text">Portfo<span>lio</span></h1>
          </div>
@@ -111,7 +113,19 @@
             </ul>
          </div>
         </div>
-    </div>
+    </div> -->
     <!-- end footer section  -->
+
+    <script>
+        var menu = document.getElementById("menu");
+
+        function closeMenu() {
+            menu.style.top = "-100vh" ;
+        }
+
+        function openMenu() {
+            menu.style.top = "0";
+        }
+    </script>
 </body>
 </html>
